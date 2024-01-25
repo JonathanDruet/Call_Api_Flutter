@@ -7,7 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:projet_test/main.dart';
 import 'package:projet_test/models/Link.dart';
 import 'package:projet_test/models/pokedexpage.dart';
-import 'constants.dart' show linkList;  // Importe une liste de liens depuis un fichier constants.dart.
+import 'constants.dart'
+    show
+        linkList; // Importe une liste de liens depuis un fichier constants.dart.
 
 // Classe MyMenu, un StatefulWidget pour gérer l'état du menu.
 class MyMenu extends StatefulWidget {
@@ -19,7 +21,8 @@ class MyMenu extends StatefulWidget {
 
 // État de MyMenu, gérant la visibilité du menu.
 class _MyMenuState extends State<MyMenu> {
-  bool menuIsActive = false;  // Indique si le menu est actuellement ouvert ou fermé.
+  bool menuIsActive =
+      false; // Indique si le menu est actuellement ouvert ou fermé.
 
   // La méthode build définit la structure du widget de menu.
   @override
@@ -50,7 +53,8 @@ class _MyMenuState extends State<MyMenu> {
               // Conteneur animé qui affiche la liste des liens.
               AnimatedContainer(
                 duration: const Duration(
-                    milliseconds: 300), // Durée de l'animation en millisecondes.
+                    milliseconds:
+                        300), // Durée de l'animation en millisecondes.
                 curve: Curves.easeInOut, // Courbe d'animation.
                 height: menuIsActive ? 100 : 0, // Hauteur conditionnelle.
 
@@ -112,14 +116,16 @@ class _MyMenuState extends State<MyMenu> {
           right: 0,
           child: GestureDetector(
             onTap: () {
-              toggleMenu();  // Appelle la fonction pour basculer l'état du menu.
+              toggleMenu(); // Appelle la fonction pour basculer l'état du menu.
             },
             child: SizedBox(
               width: 30,
               height: 30,
               child: menuIsActive
-                  ? const Icon(Icons.close)  // Affiche une icône de fermeture si le menu est ouvert.
-                  : const Icon(Icons.menu),  // Affiche une icône de menu si le menu est fermé.
+                  ? const Icon(Icons
+                      .close) // Affiche une icône de fermeture si le menu est ouvert.
+                  : const Icon(Icons
+                      .menu), // Affiche une icône de menu si le menu est fermé.
             ),
           ),
         ),
@@ -130,4 +136,7 @@ class _MyMenuState extends State<MyMenu> {
   // Fonction pour basculer l'état du menu.
   void toggleMenu() {
     setState(() {
-      menuIsActive = !menuIsActive;  // Inverse l
+      menuIsActive = !menuIsActive; // Inverse la valeur de menuIsActive
+    });
+  }
+}
